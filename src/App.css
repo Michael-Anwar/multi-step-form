@@ -6,11 +6,9 @@
   padding: 25px;
 }
 .attribution {
-  margin: 5px;
-  position: absolute;
+  margin: 5px auto;
+  position: relative;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
