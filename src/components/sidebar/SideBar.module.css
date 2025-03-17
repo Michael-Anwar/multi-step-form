@@ -55,13 +55,16 @@
       background-image: url(../../assets/images/bg-sidebar-mobile.svg);
       border-radius: 0;
       padding: 0;
-      max-height: 30vh;
+      /* min-height: fit-content; */
+      min-height: 30vh;
 
       ul{
+        margin: 15%;
+        flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateY(-30px);
+        /* transform: translateY(-30px); */
   
         flex-direction: row;
         li p{
