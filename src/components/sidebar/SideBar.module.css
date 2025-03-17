@@ -55,7 +55,7 @@
       background-image: url(../../assets/images/bg-sidebar-mobile.svg);
       border-radius: 0;
       padding: 0;
-      max-height: 300px;
+      max-height: 30vh;
 
       ul{
         display: flex;
