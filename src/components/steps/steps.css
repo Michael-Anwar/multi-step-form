@@ -1,0 +1,256 @@
+.step2,
+.step3,
+.step4 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px 0;
+  width: 80%;
+  margin: auto;
+}
+.step2 {
+  .plans-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 100%;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid rgb(214, 217, 230);
+    border-radius: 10px;
+    height: 55%;
+    flex-grow: 1;
+    padding: 15px;
+    cursor: pointer;
+
+    span {
+      color: rgb(2, 41, 90);
+      font-size: 1.6rem;
+      font-weight: 600;
+      &:last-child {
+        color: #adadad;
+      }
+    }
+
+    &:hover {
+      border: 2px solid rgb(71, 61, 255);
+    }
+    &.selected {
+      border: 2px solid rgb(71, 61, 255);
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.icon {
+  color: white;
+  font-size: 3rem;
+  background-color: rgb(250, 127, 145);
+  aspect-ratio: 1/1;
+  padding: 5px;
+  border-radius: 50%;
+}
+.switch {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 2rem;
+
+  span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(214, 217, 230);
+    &.active {
+      color: rgb(71, 61, 255);
+    }
+  }
+}
+
+.toggle-switch input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.toggle-switch label {
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-switch label:after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-120%, -50%);
+  left: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.toggle-switch input[id="togle-swith"]:checked + label:after {
+  left: 0;
+  transform: translate(20%, -50%);
+}
+
+.toggle-switch label {
+  background: rgb(71, 61, 255);
+}
+
+.step3 {
+  gap: 2rem;
+  .adon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    border: 2px solid rgb(214, 217, 230);
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    input[type="checkbox"] {
+      width: 25px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 1.2rem;
+        color: rgb(146, 146, 146);
+        &.name {
+          font-weight: 700;
+          color: rgb(2, 41, 90);
+        }
+      }
+    }
+    p {
+      color: rgb(71, 61, 255);
+      margin-left: auto;
+    }
+    &:hover,
+    &.selected {
+      border: 2px solid rgb(71, 61, 255);
+    }
+  }
+}
+
+.step4 {
+  .bg {
+    background-color: rgb(191, 226, 253);
+    padding: 2.5rem;
+    border-radius: 20px;
+  }
+  .plan,
+  .adon {
+    display: flex;
+    justify-content: space-between;
+  }
+  .plan {
+    font-weight: 700;
+    color: rgb(2, 41, 90);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(146, 146, 146);
+    div span {
+      color: rgb(146, 146, 146);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .adon {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      color: rgb(146, 146, 146);
+    }
+    p {
+      color: rgb(2, 41, 90);
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(146, 146, 146);
+
+    span {
+      color: rgb(2, 41, 90);
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .step2 {
+    .plans-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      height: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .plan {
+      .icon {
+        font-size: 2.2rem;
+      }
+      span,
+      p {
+        font-size: 1.2rem;
+      }
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  }
+  .step3 {
+    margin: 0;
+    width: 100%;
+    .adon {
+      input[type="checkbox"] {
+        width: 20px;
+      }
+    }
+  }
+  .step4 {
+    justify-content: space-between;
+    width: 100%;
+    .bg {
+      padding: 1rem;
+      border-radius: 10px;
+
+    }
+    .total {
+      font-size: 1rem;
+      padding: 1rem 0;
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+@media (max-width: 487px) {
+  .step2 {
+    width: 100%;
+    .switch {
+      gap: 10px;
+    }
+  }
+}

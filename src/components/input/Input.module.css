@@ -1,0 +1,49 @@
+.cloumn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cloumn label{
+    margin-bottom: 5px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+input{
+    height: 70px;
+    outline: none;
+    border: 2px solid #ccc; 
+    padding: 0 10px ;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+input:focus{
+    border: 2px solid hsl(243, 100%, 62%);   
+}
+.cloumn input.error{
+    border: 2px solid hsl(354, 84%, 57%);
+    color: black;  
+}
+.error{
+    color: hsl(354, 84%, 57%);
+}
+
+
+@media (max-width: 768px) {
+    input{
+        height: 40px;
+    font-size: 1rem;
+
+    }
+    .cloumn label{
+        font-size: 1.1rem;
+    }
+}

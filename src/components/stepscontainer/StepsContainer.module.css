@@ -1,0 +1,35 @@
+.stepsContainer {
+  width: 75%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  direction: rtl;
+}
+
+@media (max-width: 768px) {
+  .stepsContainer {
+    transform: translateY(-70px);
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 487px) {
+  .stepsContainer {
+    width: 90;
+    padding: 15px;
+    transform: translateY(-70px);
+   min-width: fit-content;
+  }
+}
